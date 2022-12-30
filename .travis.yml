@@ -10,7 +10,7 @@ before_install:
 script:
   - docker run -e CI=true shavetapujani/react-test npm test 
 
-  after_success:
+after_success:
   - docker build -t shavetapujani/multi-client ./client
   - docker build -t shavetapujani/multi-nginx ./nginx
   - docker build -t shavetapujani/multi-server ./server
