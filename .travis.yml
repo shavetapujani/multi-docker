@@ -15,7 +15,7 @@ script:
   - docker build -t shavetapujani/multi-nginx ./nginx
   - docker build -t shavetapujani/multi-server ./server
   - docker build -t shavetapujani/multi-worker ./worker
-  # Log in to the docker CLI
+  # Log in to the docker CLI 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push shavetapujani/multi-client
